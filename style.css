@@ -1,0 +1,274 @@
+/*  
+Theme Name: ManabiTheme - Entry Level
+Theme URI: http://waviaei.com/2010/03/13/manabitheme-entrylevel-09release/
+Description: ManabiTheme - Entry Level（学びテーマ - 初級）は、WordPressテーマを学ぶ為のテーマです。これは初級編です。
+Version: 0.9
+Author: Toru
+Author URI: http://waviaei.com
+*/
+
+/*
+1. Normalize
+2. Global settings
+3. Structure -- framework
+4. Structure -- Header
+5. Structure -- Contents
+6. Structure -- Sidebar
+7. Structure -- Footer
+*/
+
+/* ------------------------------------
+1. Normalize
+-------------------------------------*/
+html, body, div, a, 
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre,img, 
+ol, ul, li, dl, dt, dd, 
+span, abbr, acronym, address, cite, code, del, dfn, em, ins, kbd, q, samp, strong, sub, sup, var, 
+form, fieldset, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, 
+applet, object, iframe, embed, 
+tt,strike,s,small,font, big {
+	margin: 0;
+	padding: 0;
+	border 0;
+	outline: 0;
+	font-family: inherit;
+	vertical-align: baseline;
+	background: transparent;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a, a:link, a:visited, a:hover, a:active {
+	border: 0;
+}
+a img, :link img, :visited img, a:link img, a:hover img, a:visited img, a:active img {
+	border: 0;
+}
+ul, ol, li {list-style: none;}
+
+
+/* ------------------------------------
+2. Global settings
+-------------------------------------*/
+body {
+	font: 14px/1.7 Meiryo, Verdana, Candara, sans-serif;
+	*font-size: small; /* Win IE7およびWin IE6標準準拠モード向け */
+	*font: x-small; /* Win IE 5-5.5､6(後方互換モード)向け */
+}
+body {/*color stuff*/
+	background: #fff;
+	color: #333;
+}
+
+/* ************ Linkage ************ */
+a, a:link, a:visited, a:active {
+	color: #982F18;
+	text-decoration: none;
+}
+a:hover {
+	color: #f74e27;
+	text-decoration: none;
+}
+a:hover img {
+	border-bottom: none;
+}
+
+/* ************ Headings ************ */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	background: transparent;
+}
+h1, h2, h3, h4, h5, h6 {clear: both;}
+
+h1 {font-size: 165%; line-height: 1; margin: 0 0 1em 0; }
+h2 {font-size: 132.14%; line-height: 1.2486; margin-top: 1.8729em; margin-bottom: 0.6432em; }
+h3 {font-size: 110.71%; line-height: 1.4903; margin-top: 2.2354em; margin-bottom: 0.7451em; }
+h4,
+h5,
+h6 {font-size: 100%; line-height: 1.65; margin-top: 2.475em; margin-bottom: 0.825em; }
+
+/* ********** Common stuff ********** */
+p, pre, ol, ul, dl {
+	font-size: 100%;
+	margin: 0 0 1.65em 0;
+}
+
+blockquote {
+	font-size: 92.857%;/* 13px */
+}
+
+code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 92.857%;/* 13px */
+}
+pre code {
+	line-height: 1.4;
+}
+
+strong {font-weight: bold;}
+em {font-weight: italic;}
+kbd {
+	font-family: "Courier New", Courier, mono;
+	font-size: 107.14%;/* 15px */
+	line-height: 1.54;
+}
+address, cite {
+	font-style: normal;
+}
+
+/* ************ Lists ************ */
+li p, li pre, li dt, li dd,
+dd li, dd p, dd pre, dd dt,
+dd dd {font-size: 100%;}
+
+/* ************ Forms ************ */
+select option { padding : 0 5px; }
+form label{ cursor : pointer; }
+
+/* ************Tables ************ */
+caption {text-align: center;}
+
+/* ************ Useful *********** */
+.hide {
+	display: none;
+}
+.clear {
+	clear: both;
+}
+
+/* ********** Clearfix ************ */
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+.clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* ************ For WordPress *********** */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignleft { float: left; }
+.alignright { float: right; }
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+	font-size: 85.714%;
+	padding: 3px 4px 5px;
+	margin: 0;
+}
+
+/* ------------------------------------
+3. Structure -- framework
+-------------------------------------*/
+#wrapper {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+#header {
+	width: 904px;
+	height:auto;
+	padding-top: 2em;
+	margin-left: 28px;
+}
+
+#contents {
+	width: 593px;
+	margin-left: 28px;
+	margin-bottom: 50px;
+	float: left;
+}
+
+#sidebar {
+	width: 283px;
+	margin-right: 28px;
+	margin-bottom: 50px;
+	float: right;
+}
+
+#footer {
+	width: 904px;
+	height: 30px;
+	margin-left: 28px;
+	clear: both;
+}
+
+
+/* ------------------------------------
+4. Structure -- Header
+-------------------------------------*/
+h1#blog-title {
+	margin-bottom: 0em;
+}
+p.description {
+	font-size: 85.714%;
+}
+
+/* ------------------------------------
+5. Structure -- Contents
+-------------------------------------*/
+h2#archive-title {
+	font-weight: bold;
+	border-bottom: 1px solid;
+}
+
+div.post {
+	margin-bottom: 80px;
+}
+p.entry-meta {
+	font-size: 85.714%;
+}
+
+div.navigation {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+li.pingback, li.comment {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+div.reply {
+	text-align: right;
+}
+
+/* ------------------------------------
+6. Structure -- Sidebar
+-------------------------------------*/
+div#sidebar ul ul li {
+	list-style: square;
+	list-style-position: inside;
+}
+
+/* ------------------------------------
+7. Structure -- Footer
+-------------------------------------*/
+div#footer p {
+	text-align: center;
+	font-size: 85.714%;
+}
+
